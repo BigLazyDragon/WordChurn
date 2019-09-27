@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-            <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-            <link href='main.css' rel = 'stylesheet'>
-        </head>
-        <body>
-            <div id="editor-container"></div>
-        </body>
-        <script>
-            var quill = new Quill('#editor-container', {
-              modules: {
-                toolbar: [
-                  [{ header: [1, 2, false] }],
-                  ['bold', 'italic', 'underline'],
-                  ['image', 'code-block']
-                ]
-              },
-              placeholder: 'Compose an epic...',
-              theme: 'snow'  // or 'bubble'
-});
-        </script>
-    </html>
+<html>
+<head>
+  <script src="https://cdn.tiny.cloud/1/by0bp7hv4x3ge27dizsi9rtx1v25r3bl16db0gcjf161ohm0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+  <textarea>Next, use our Get Started docs to setup Tiny!</textarea>
+</body>
+</html>
