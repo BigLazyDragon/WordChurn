@@ -1,0 +1,129 @@
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+}
+@keyframes drop {
+    from {top:0px;}
+    to {top:20px;}
+}
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Lato;
+    //background-color: bisque;
+    //font-size: 14pt;
+    font-weight: 750;
+}
+#gear {
+    position:absolute;
+    z-index: 1;
+    display: inline;
+    transform: rotate(0deg);
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+p {
+    position: absolute;
+    top:10px;
+    left: 100px;
+}
+#gear:hover {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.unselectable {
+    -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#text {
+    font-weight: 750;
+    z-index: 0;
+    font-family: Lato;
+    text-align: left;
+    padding:10px;
+    border: none;
+    position:absolute; 
+    top:0; 
+    right:0; 
+    bottom:1px; 
+    left:0;
+    margin-left: 10%;
+    resize: none; 
+    /*min-height: 70em; */
+    width:80%;
+    //background-color: bisque;
+}
+textarea {
+    border: 0;
+}
+textarea:focus {
+    outline:0;
+}
+#wordCounter {
+    /*border-right-style:solid;
+    border-right-width: 20px;
+    border-right-color:grey;*/
+    //box-shadow: 2px 2px 10px grey;
+    position:absolute;
+    padding: 5px;
+    top:151px;
+    bottom: 1px;
+    max-width: 8%;
+    z-index:1;
+}
+#wordCounter:before {
+    content:"howdy!"
+}
+.settingsBox {
+    margin: .5%;
+    max-width: 8%;
+    position: absolute;
+    background-color: coral;
+    resize: none;
+    text-align: center;
+}
+#wordGoal { 
+    top: 1px;
+}
+#WPMGoal {
+    top: 51px;
+}
+#timeGoal {
+    top:101px;
+}
+#sidebar {
+    width: 10%;
+    position:absolute;
+    top:1px;
+    bottom:1px;
+    z-index:0;
+    background-color: #f9e7d2;
+}
+#dropDown {
+    left:5px;
+    position:absolute;
+    top:251px;
+    width:20px;
+    height: 20px;
+}
+#dropMenu {
+    position:absolute;
+    display: none;
+}
+#dropDown:hover #dropMenu {
+    display: block;
+    animation-name: drop;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+#editor-container {
+    height:95vh
+}
